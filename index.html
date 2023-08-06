@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Pepsi Website Landing Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  
+  </head>
+  <body>
+    <section class="sec">
+      <header>
+        <a href="#"><img src="img/logo.png" class="logo" /></a>
+        <div class="toggleMenu" onclick="menuToggle();"></div>
+        <ul class="navigation">
+          <li class="navItems"><a href="#">Home</a></li>
+          <li class="navItems"><a href="#">Drink</a></li>
+          <li class="navItems"><a href="#">News</a></li>
+          <li class="navItems"><a href="#">Logistic</a></li>
+          <li class="navItems"><a href="#">Mailbox</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2 id="typewriter"> </h2>
+            <h2><span>my pepsi</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aut inventore unde odit reiciendis dolore vel consequatur officiis iusto? Voluptate dolore nulla non fugit facere rerum vitae? Nemo animi veniam aspernatur. Deleniti sint facere nostrum minima voluptas quia.
+          </p>
+          <a class="button left" href="#">View All Products</a>
+          <a class="button right" href="#">Buy now !</a>
+        </div>
+        <div class="imgBox">
+          <img class="image pepsi" src="img/pepsi001.png"/>
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            class="thumbImg"
+            src="./img/pepsi001.png"
+            onclick="imgSlider('./img/pepsi001.png');changeBgColor('#0062be')"
+          />
+        </li>
+        <li>
+          <img 
+            class="thumbImg"
+            src="./img/pepsi002.png"
+            onclick="imgSlider('./img/pepsi002.png');changeBgColor('#e60c2c')"
+          />
+        </li>
+        <li >
+          <img
+            class="thumbImg"
+            src="./img/pepsi003.png"
+            onclick="imgSlider('./img/pepsi003.png');changeBgColor('#1e1e1e')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li class="socialIcon">
+          <a href="#"><img src="./img/facebook.png" /></a>
+        </li>
+        <li class="socialIcon">
+          <a href="#"><img src="./img/twitter.png" /></a>
+        </li>
+        <li class="socialIcon">
+          <a href="#"><img src="./img/instagram.png" /></a>
+        </li>
+      </ul>
+    </section>
+
+    <script src="./app.js"></script>
+    <script src="./animations.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      let typed = new Typed("#typewriter" ,{
+        strings: [
+          "I like",
+          "i want",
+          "i dream with"
+        ],
+        cursorChar: "_", 
+        startDelay: 500,
+        typeSpeed: 80,
+        backSpeed: 40,
+        loop: true,
+      })
+    </script>
+  </body>
+</html>
